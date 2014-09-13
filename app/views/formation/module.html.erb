@@ -43,5 +43,21 @@
 <% end %>
 
 <% if params['module'] != nil %>
-<%= video_tag @passage.video, size: '1024x640', controls: 'true', autoplay: true, poster: 'poster.png', :autobuffer => true %>
+<script type="text/javascript" src="http://www.supportduweb.com/page/js/flashobject.js"></script>
+<div id="player_2532" style="display:inline-block;">
+    <a href="http://get.adobe.com/flashplayer/">You need to install the Flash plugin</a> - <a href="http://www.supportduweb.com/">http://www.supportduweb.com/</a>
+</div>
+<script type="text/javascript">
+    var flashvars_2532 = {};
+    var params_2532 = {
+        quality: "high",
+        wmode: "transparent",
+        bgcolor: "#ffffff",
+        allowScriptAccess: "always",
+        allowFullScreen: "true",
+        flashvars: "fichier=https://s3-eu-west-1.amazonaws.com/acquis/litterature/<%= @passage.video %>&apercu=http://www.aperçu.png"
+    };
+    var attributes_2532 = {};
+    flashObject("http://flash.supportduweb.com/flv_player/v1_13.swf", "player_2532", "1024", "640", "8", false, flashvars_2532, params_2532, attributes_2532);
+</script>
 <% end %>

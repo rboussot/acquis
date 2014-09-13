@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 
+<script language="JavaScript1.2">
+function nosource()
+{
+;
+return(false);
+}
+document.oncontextmenu = nosource;
+</script>
+
 <header>
 	<% if params['controller'] == 'accueil' %>
 	<div id = "logo"><a href="/"><%= image_tag 'logo_on.png', :size => "55x55" %></a></div>

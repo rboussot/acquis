@@ -18,7 +18,7 @@ class BibliothequeController < ApplicationController
       @auteur = Auteur.where(nom_entier: params['auteur'])
       @oeuvres = Oeuvre.where(auteur_id: @auteur)
       else
-      @oeuvres = Oeuvre.all.order(:date)  
+      @oeuvres = Oeuvre.all.order(:date)
       end
     @lienthemes = Lientheme.all
   end
@@ -33,7 +33,7 @@ class BibliothequeController < ApplicationController
   end
 
   def nouveautes
-    @oeuvres = Oeuvre.limit(5).order('updated_at desc').reverse
+    @oeuvres = Oeuvre.limit(5).order('updated_at desc')
   end
 
 end

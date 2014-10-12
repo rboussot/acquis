@@ -136,6 +136,10 @@ body {
 	margin-top: 120px;
 }
 
+.nav a {
+  color: #9cd1d9;
+}
+
 header strong a:visited {
 	color: #ffd84d;
 }

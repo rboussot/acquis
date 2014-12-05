@@ -26,12 +26,6 @@ class BibliothequeController < ApplicationController
   def methode
   end
 
-  def grammaire
-  end
-
-  def stylistique
-  end
-
   def nouveautes
     @oeuvres = Oeuvre.limit(5).order('updated_at desc')
   end

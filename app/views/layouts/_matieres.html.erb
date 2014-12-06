@@ -25,13 +25,23 @@
 	<%= link_to "Littérature", mes_cours_litterature_path %></strong><br><br>
 
 	<% if params['action'] == 'methode' %><strong><% end %>
-	<%= link_to "Méthode", mes_cours_methode_path %></strong><br><br>
+	<%= link_to "Méthodes et techniques", bibliotheque_methode_path %></strong><br><br>
 
-	<% if params['action'] == 'grammaire' %><strong><% end %>
-	<%= link_to "Grammaire", mes_cours_grammaire_path %></strong><br><br>
+<% when 'accueil' %>
 
-	<% if params['action'] == 'stylistique' %><strong><% end %>
-	<%= link_to "Stylistique", mes_cours_stylistique_path %></strong><br><br>
+	<% if params['action'] == 'bio' %>
+	<%= link_to "Compte gratuit !", '../users/new' %><br><br>
+	<strong><%= link_to "Voir la méthodologie", 'bio' %></strong><br><br>
+
+	<% else %>
+	<%= link_to "Compte gratuit !", 'users/new' %><br><br>
+	<%= link_to "Voir la méthodologie", 'accueil/bio' %><br><br>
+	<% end %>
+
+<% when 'users' %>
+
+	<strong><%= link_to "Compte gratuit !", 'users/new' %></strong><br><br>
+	<%= link_to "Voir la méthodologie", '../accueil/bio' %><br><br>
 
 <% end %>
 </div>

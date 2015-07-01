@@ -43,9 +43,21 @@
 <% end %>
 
 <% if params['module'] != nil %>
-
-<video poster="poster.png" controls width="1024px" height="640px" autoplay preload="metadata">
-	<source src="https://s3-eu-west-1.amazonaws.com/acquis/litterature/<%= @passage.video %>"></source>
-</video>
-
+<script type="text/javascript" src="http://www.supportduweb.com/page/js/flashobject.js"></script>
+<div id="player_2532" style="display:inline-block;">
+    <a href="http://get.adobe.com/flashplayer/">Essayez de recharger la page, si cela ne fonctionne toujours pas, cliquez sur ce lien pour installer le plugin Flash</a> - <a href="http://www.supportduweb.com/">http://www.supportduweb.com/</a>
+</div>
+<script type="text/javascript">
+    var flashvars_2532 = {};
+    var params_2532 = {
+        quality: "high",
+        wmode: "transparent",
+        bgcolor: "#ffffff",
+        allowScriptAccess: "always",
+        allowFullScreen: "true",
+        flashvars: "fichier=https://s3-eu-west-1.amazonaws.com/acquis/litterature/<%= @passage.video %>&apercu=poster.png"
+    };
+    var attributes_2532 = {};
+    flashObject("http://flash.supportduweb.com/flv_player/v1_13.swf", "player_2532", "1024", "640", "8", false, flashvars_2532, params_2532, attributes_2532);
+</script>
 <% end %>
